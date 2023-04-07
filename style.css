@@ -1,0 +1,112 @@
+:root{
+--orange: hsl(31, 77%, 52%);
+--cyan: hsl(184, 100%, 22%);
+--darkcyan: hsl(179, 100%, 13%);
+--white: hsla(0, 0%, 100%, 0.75);
+--lightgray: hsl(0, 0%, 95%);
+}
+
+*{
+    font-family:'Lexend Deco', sans-serif;
+    font-size:15px;
+    font-weight: 400;
+    color:white;
+}
+body{
+    background-color:var(--lightgray);
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    width:320px;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    
+
+}
+.sedans, .suvs, .luxury{
+    height: 360px;
+    padding: 3.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color:var(--white);
+}
+.sedans{
+    background-color: var(--orange);
+
+
+}
+.suvs{
+    background-color: var(--cyan);
+}
+.luxury{
+    background-color: var(--darkcyan);
+}
+
+h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+button{
+    padding:1rem;
+    border-radius: 1.5rem;
+    width:130px;
+    border:none;
+    margin-top:0.6rem;
+    font-weight: 700;
+    font-size:0.9rem;
+}
+#btnsedans{
+    color:var(--orange);
+}
+#btnsedans:hover{
+    color:white;
+    background-color: var(--orange);
+    border: 2px white solid;
+    cursor: pointer;
+}
+#btnsuvs{
+    color:var(--cyan);
+}
+#btnsuvs:hover{
+    color:white;
+    background-color:var(--cyan);
+    border: 2px white solid;
+    cursor: pointer;
+}
+#btnluxury{
+    color:var(--darkcyan);
+}
+#btnluxury:hover{
+    color:white;
+    background-color:var(--darkcyan);
+    border: 2px white solid;
+    cursor:pointer;
+}
+
+@media screen and (min-width:1024px){
+    body{
+        display:grid;
+        place-content: center;
+        height:100vh;
+    }
+    .card{
+        display:flex;
+        flex-direction: row;
+        width:900px;
+    
+    }
+    .sedans, .suvs, .luxury{
+        height: 400px;
+        
+}
+    button{
+        margin-top: 5rem;
+    }
+}
+
+
